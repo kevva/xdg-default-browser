@@ -1,0 +1,38 @@
+{
+  "name": "xdg-default-browser",
+  "version": "1.0.0",
+  "description": "Get default browser on Linux",
+  "license": "MIT",
+  "repository": "kevva/xdg-default-browser",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "bin": {
+    "xdg-default-browser": "cli.js"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "cli.js",
+    "index.js"
+  ],
+  "keywords": [
+    "browser",
+    "cli",
+    "default",
+    "linux"
+  ],
+  "dependencies": {
+    "meow": "^3.1.0",
+    "titleize": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
