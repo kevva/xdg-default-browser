@@ -2,6 +2,8 @@
 
 > Get default browser on Linux
 
+Issues with the output should be reported on the [Debian](https://bugs.debian.org), [Freedesktop.org](https://bugs.freedesktop.org/) or corresponding issue trackers.
+
 
 ## Install
 
