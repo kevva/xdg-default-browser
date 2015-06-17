@@ -2,7 +2,13 @@
 var test = require('ava');
 var xdgDefaultBrowser = require('./');
 
-test(function (t) {
-	t.assert(true);
-	t.end();
-});
+if (!process.env.CI) {
+	test(function (t) {
+		t.plan(2);
+
+		xdgDefaultBrowser(function (err, browser) {
+			t.assert(!err, err);
+			t.assert(browser);
+		});
+	});
+}
