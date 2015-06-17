@@ -1,5 +1,4 @@
 'use strict';
-
 var execFile = require('child_process').execFile;
 var titleize = require('titleize');
 
