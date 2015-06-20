@@ -8,7 +8,7 @@ meow({
 		'Example',
 		'  $ xdg-default-browser',
 		'  Google Chrome'
-	].join('\n')
+	]
 });
 
 xdgDefaultBrowser(function (err, browser) {
