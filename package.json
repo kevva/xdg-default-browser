@@ -12,25 +12,19 @@
   "engines": {
     "node": ">=4"
   },
-  "bin": {
-    "xdg-default-browser": "cli.js"
-  },
   "scripts": {
     "test": "xo && ava"
   },
   "files": [
-    "cli.js",
     "index.js"
   ],
   "keywords": [
     "browser",
-    "cli",
     "default",
     "linux"
   ],
   "dependencies": {
     "execa": "^0.2.2",
-    "meow": "^3.3.0",
     "titleize": "^1.0.0"
   },
   "devDependencies": {

@@ -24,19 +24,9 @@ xdgDefaultBrowser().then(browser => {
 ```
 
 
-## CLI
+## Related
 
-```
-$ npm install --global xdg-default-browser
-```
-
-```
-$ xdg-default-browser --help
-
-  Example
-    $ xdg-default-browser
-    Google Chrome
-```
+* [default-browser](https://github.com/sindresorhus/default-browser) - CLI for getting the default browser
 
 
 ## License
