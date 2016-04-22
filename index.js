@@ -1,21 +1,18 @@
 'use strict';
-var execFile = require('child_process').execFile;
-var titleize = require('titleize');
+const execa = require('execa');
+const titleize = require('titleize');
 
-module.exports = function (cb) {
+module.exports = function () {
 	if (process.platform !== 'linux') {
-		throw new Error('Only Linux systems are supported');
+		return Promise.reject(new Error('Only Linux systems are supported'));
 	}
 
-	execFile('xdg-mime', ['query', 'default', 'x-scheme-handler/http'], function (err, stdout) {
-		if (err) {
-			cb(err);
-			return;
-		}
+	return execa('xdg-mime', ['query', 'default', 'x-scheme-handler/http']).then(res => {
+		const stdout = res.stdout.trim();
 
-		cb(null, {
-			name: titleize(stdout.trim().replace(/.desktop$/, '').replace('-', ' ')),
-			id: stdout.trim()
-		});
+		return {
+			name: titleize(stdout.replace(/.desktop$/, '').replace('-', ' ')),
+			id: stdout
+		};
 	});
 };

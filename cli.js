@@ -1,21 +1,12 @@
 #!/usr/bin/env node
 'use strict';
-var meow = require('meow');
-var xdgDefaultBrowser = require('./');
+const meow = require('meow');
+const xdgDefaultBrowser = require('./');
 
-meow({
-	help: [
-		'Example',
-		'  $ xdg-default-browser',
-		'  Google Chrome'
-	]
-});
+meow(`
+	Example
+	  $ xdg-default-browser
+	  Google Chrome
+`);
 
-xdgDefaultBrowser(function (err, browser) {
-	if (err) {
-		console.error(err.message);
-		process.exit(1);
-	}
-
-	console.log(browser.name);
-});
+xdgDefaultBrowser().then(browser => console.log(browser.name));

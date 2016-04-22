@@ -15,9 +15,9 @@ $ npm install --save xdg-default-browser
 ## Usage
 
 ```js
-var xdgDefaultBrowser = require('xdg-default-browser');
+const xdgDefaultBrowser = require('xdg-default-browser');
 
-xdgDefaultBrowser(function (err, browser) {
+xdgDefaultBrowser().then(browser => {
 	console.log(browser);
 	//=> {name: 'Google Chrome', id: 'google-chrome.desktop'}
 });
@@ -34,7 +34,7 @@ $ npm install --global xdg-default-browser
 $ xdg-default-browser --help
 
   Example
-    xdg-default-browser
+    $ xdg-default-browser
     Google Chrome
 ```
 
