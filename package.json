@@ -10,7 +10,7 @@
     "url": "https://github.com/kevva"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "bin": {
     "xdg-default-browser": "cli.js"
@@ -29,6 +29,7 @@
     "linux"
   ],
   "dependencies": {
+    "execa": "^0.2.2",
     "meow": "^3.3.0",
     "titleize": "^1.0.0"
   },

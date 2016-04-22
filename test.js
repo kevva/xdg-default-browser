@@ -4,10 +4,9 @@ var xdgDefaultBrowser = require('./');
 
 if (!process.env.CI) {
 	test(function (t) {
-		t.plan(2);
+		t.plan(1);
 
-		xdgDefaultBrowser(function (err, browser) {
-			t.assert(!err, err);
+		xdgDefaultBrowser().then(function (browser) {
 			t.assert(browser);
 		});
 	});
