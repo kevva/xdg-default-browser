@@ -16,7 +16,7 @@
     "xdg-default-browser": "cli.js"
   },
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
   },
   "files": [
     "cli.js",
@@ -34,6 +34,10 @@
     "titleize": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "*"
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }
