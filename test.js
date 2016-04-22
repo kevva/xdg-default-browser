@@ -1,13 +1,14 @@
-'use strict';
-var test = require('ava');
-var xdgDefaultBrowser = require('./');
+import test from 'ava';
+import m from './';
 
-if (!process.env.CI) {
-	test(function (t) {
-		t.plan(1);
+test(async t => {
+	if (process.env.CI) {
+		t.pass();
+		return;
+	}
 
-		xdgDefaultBrowser().then(function (browser) {
-			t.assert(browser);
-		});
-	});
-}
+	const res = await m();
+
+	t.truthy(res.name);
+	t.truthy(res.id);
+});
