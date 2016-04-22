@@ -1,6 +1,6 @@
 {
   "name": "xdg-default-browser",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Get default browser on Linux",
   "license": "MIT",
   "repository": "kevva/xdg-default-browser",
